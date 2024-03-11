@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Assignment3.Tests
-build_property.ProjectDir = C:\Users\apnor\Downloads\Assignment3Skeleton\Assignment3\Assignment3.Tests\
+build_property.ProjectDir = C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3.Tests\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

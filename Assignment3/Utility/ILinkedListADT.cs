@@ -12,24 +12,24 @@ namespace Assignment3
         /// Checks if the list is empty.
         /// </summary>
         /// <returns>True if it is empty.</returns>
-        bool IsEmpty();
+        bool IsEmpty(); //adam
 
         /// <summary>
         /// Clears the list.
         /// </summary>
-        void Clear();
+        void Clear(); //adam
 
         /// <summary>
         /// Adds to the end of the list.
         /// </summary>
         /// <param name="value">Value to append.</param>
-        void AddLast(User value);
+        void AddLast(User value); //adam
 
         /// <summary>
         /// Prepends (adds to beginning) value to the list.
         /// </summary>
         /// <param name="value">Value to store inside element.</param>
-        void AddFirst(User value);
+        void AddFirst(User value); //adam
 
         /// <summary>
         /// Adds a new element at a specific position.
@@ -37,7 +37,7 @@ namespace Assignment3
         /// <param name="value">Value that element is to contain.</param>
         /// <param name="index">Index to add new element at.</param>
         /// <exception cref="IndexOutOfRangeException">Thrown if index is negative or past the size of the list.</exception>
-        void Add(User value, int index);
+        void Add(User value, int index); //adam
 
         /// <summary>
         /// Replaces the value  at index.
@@ -45,7 +45,7 @@ namespace Assignment3
         /// <param name="value">Value to replace.</param>
         /// <param name="index">Index of element to replace.</param>
         /// <exception cref="IndexOutOfRangeException">Thrown if index is negative or larger than size - 1 of list.</exception>
-        void Replace(User value, int index);
+        void Replace(User value, int index); //adam
 
         /// <summary>
         /// Gets the number of elements in the list.
