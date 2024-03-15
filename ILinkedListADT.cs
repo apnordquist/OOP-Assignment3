@@ -9,8 +9,6 @@ namespace OOP_Assignment3
 {
     public interface ILinkedListADT
     {
-        public Node<T>? Head { get; set; }
-        public Node<T>? Tail { get; set; }
         /// <summary>
         /// Checks if the list is empty.
         /// </summary>
