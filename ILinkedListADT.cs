@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,13 @@ namespace OOP_Assignment3
 {
     public interface ILinkedListADT
     {
+        public Node<T>? Head { get; set; }
+        public Node<T>? Tail { get; set; }
         /// <summary>
         /// Checks if the list is empty.
         /// </summary>
         /// <returns>True if it is empty.</returns>
-        bool IsEmpty(); //adam
+        public bool IsEmpty(); //adam
 
         /// <summary>
         /// Clears the list.

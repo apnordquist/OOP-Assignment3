@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_Assignment3
 {
-    internal class Node<T>
+    public class Node<T>
     {
             // Public property 'Data' holds the value of the node.
             public T Data { get; set; }

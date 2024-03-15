@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_Assignment3
 {
-    internal class User
-    {
-        public class User : IEquatable<User>
+    public class User : IEquatable<User>
         {
             public int Id { get; private set; }
             public string Name { get; private set; }
@@ -85,5 +83,4 @@ namespace OOP_Assignment3
                 return hashCode;
             }
         }
-    }
 }
