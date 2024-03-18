@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -97,27 +98,49 @@ namespace OOP_Assignment3
                 current = newNode; //replace the position
             }
         }
-        public int Count()
+        public int Count() //adam
         {
             return Counter;
         }
 
-        public void RemoveFirst()
+        public void RemoveFirst() //vedant
         { }
 
-        public void RemoveLast()
+        public void RemoveLast() //vedant
         { }
 
-        public void Remove(int index)
+        public void Remove(int index) //vedant
         { }
 
-        public User GetValue(int index)
+        public User GetValue(int index) //vedant
         { }
 
-        public int IndexOf(User value)
+        public int IndexOf(User value) //vedant
         { }
 
-        public bool Contains(User value)
+        public bool Contains(User value)//vedant
         { }
+
+        public void ReverseOrder(UserLinkedList<User> list) //additional method from assignement
+        {
+            int revCounter = list.Count(); //get list length
+            UserLinkedList<User> revList = new UserLinkedList<User>();
+            while (revCounter >= 0)
+            {
+                Node<User> current = Head;
+                for (int i = 0; i < revCounter - 1; i++) //adjust index to work with counter
+                {
+                    current = current.Next; //go to last item
+                }
+                revList.AddFirst(current.Data); //add to new list
+                revCounter--;
+            }
+            list = revList; //replace list with the reversed list
+        }
+
+        public void Bonus2() //additional method from assignement
+        {
+
+        }
     }
 }
