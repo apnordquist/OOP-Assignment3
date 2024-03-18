@@ -138,9 +138,14 @@ namespace OOP_Assignment3
             list = revList; //replace list with the reversed list
         }
 
-        public void Bonus2() //additional method from assignement
+        public void JoinLists(UserLinkedList<User> list1, UserLinkedList<User> list2) //additional method from assignement
         {
-
+            int index = list2.Counter; //get length of the second list
+            while (index > 0) //loop through the second list
+            {
+                list1.AddLast(list2.Head.Data); //add to the first value to the end of the first list
+                list2.RemoveFirst(); //remove from the second list
+            }
         }
     }
 }
