@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -103,24 +103,119 @@ namespace OOP_Assignment3
             return Counter;
         }
 
-        public void RemoveFirst() //vedant
-        { }
+        public void RemoveFirst()//vedant
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("The list is empty.");
+                return;
+            }
 
-        public void RemoveLast() //vedant
-        { }
+            Head = Head.Next;
+            Counter--;
 
-        public void Remove(int index) //vedant
-        { }
+            if (Head == null)
+            {
+                Tail = null;
+            }
+        }
 
-        public User GetValue(int index) //vedant
-        { }
+        public void RemoveLast()// vedant
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("The list is empty/Null");
+                return;
+            }
 
-        public int IndexOf(User value) //vedant
-        { }
+            if (Head == Tail)
+            {
+                Head = null;
+                Tail = null;
+                Counter = 0;
+                return;
+            }
 
-        public bool Contains(User value)//vedant
-        { }
+            Node<User>? current = Head;
+            while (current!.Next != Tail)
+            {
+                current = current.Next;
+            }
 
+            current.Next = null;
+            Tail = current;
+            Counter--;
+        }
+
+        public void Remove(int index)//vedant
+        {
+            if (index < 0 || index >= Counter)
+            {
+                Console.WriteLine("The index is out of range of the list.");
+                return;
+            }
+
+            if (index == 0)
+            {
+                RemoveFirst();
+                return;
+            }
+
+            if (index == Counter - 1)
+            {
+                RemoveLast();
+                return;
+            }
+
+            Node<User>? current = Head;
+            for (int i = 0; i < index - 1; i++)
+            {
+                current = current!.Next;
+            }
+
+            current.Next = current.Next!.Next;
+            Counter--;
+        }
+
+        public User GetValue(int index)
+        {
+            if (index < 0 || index >= Counter)
+            {
+                throw new IndexOutOfRangeException("Index is out of range of the list.");
+            }
+
+            Node<User>? current = Head;
+            for (int i = 0; i < index; i++)
+            {
+                current = current!.Next;
+            }
+
+            return current!.Data;
+        }
+
+        public int IndexOf(User value)//vedant 
+        {
+            Node<User>? current = Head;
+            int index = 0;
+            while (current != null)
+            {
+                if (current.Data.Equals(value))
+                {
+                    return index;
+                }
+                current = current.Next;
+                index++;
+            }
+
+            return -1; 
+        }
+
+        public bool Contains(User value)
+        {
+            return IndexOf(value) != -1;
+        }
+
+    
         public void ReverseOrder(UserLinkedList<User> list) //additional method from assignement
         {
             int revCounter = list.Count(); //get list length
