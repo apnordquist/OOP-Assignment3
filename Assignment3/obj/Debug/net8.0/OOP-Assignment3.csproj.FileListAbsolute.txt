@@ -1,0 +1,15 @@
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\bin\Debug\net8.0\OOP-Assignment3.exe
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\bin\Debug\net8.0\OOP-Assignment3.deps.json
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\bin\Debug\net8.0\OOP-Assignment3.runtimeconfig.json
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\bin\Debug\net8.0\OOP-Assignment3.dll
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\bin\Debug\net8.0\OOP-Assignment3.pdb
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\obj\Debug\net8.0\OOP-Assignment3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\obj\Debug\net8.0\OOP-Assignment3.AssemblyInfoInputs.cache
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\obj\Debug\net8.0\OOP-Assignment3.AssemblyInfo.cs
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\obj\Debug\net8.0\OOP-Assignment3.csproj.CoreCompileInputs.cache
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\obj\Debug\net8.0\OOP-Assignment3.sourcelink.json
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\obj\Debug\net8.0\OOP-Assignment3.dll
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\obj\Debug\net8.0\refint\OOP-Assignment3.dll
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\obj\Debug\net8.0\OOP-Assignment3.pdb
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\obj\Debug\net8.0\OOP-Assignment3.genruntimeconfig.cache
+C:\Users\apnor\CPRG211\OOP-Assignment3\Assignment3\obj\Debug\net8.0\ref\OOP-Assignment3.dll
