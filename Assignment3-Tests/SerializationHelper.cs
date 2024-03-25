@@ -5,8 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
-using OOP_Assignment3.Utility;
 using OOP_Assignment3.ProblemDomain;
+using OOP_Assignment3.Utility;
+using OOP_Assignment3;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text.Json;
+using NUnit.Framework.Internal.Execution;
 
 namespace Assignment3.Tests
 {
@@ -17,13 +21,10 @@ namespace Assignment3.Tests
         /// </summary>
         /// <param name="users">List of users</param>
         /// <param name="fileName"></param>
-        public static void SerializeUsers(ILinkedListADT users, string fileName)
+        public static void SerializeUsers(UserLinkedList<User> users, string fileName)
         {
-            DataContractSerializer serializer = new DataContractSerializer(typeof(List<User>));
-            using (FileStream stream = File.Create(fileName))
-            {
-                serializer.WriteObject(stream, users);
-            }
+            string jsonString = JsonSerializer.Serialize(users);
+            File.WriteAllText(fileName, jsonString);
         }
 
         /// <summary>
@@ -31,13 +32,10 @@ namespace Assignment3.Tests
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns>List of users</returns>
-        public static ILinkedListADT DeserializeUsers(string fileName)
+        public static UserLinkedList<User> DeserializeUsers(string fileName)
         {
-            DataContractSerializer serializer = new DataContractSerializer(typeof(List<User>));
-            using (FileStream stream = File.OpenRead(fileName))
-            {
-                return (ILinkedListADT)serializer.ReadObject(stream);
-            }
+            string jsonData = File.ReadAllText(fileName);
+            return JsonSerializer.Deserialize<UserLinkedList<User>>(jsonData);
         }
     }
 }

@@ -1,18 +1,19 @@
 using OOP_Assignment3.ProblemDomain;
 using OOP_Assignment3.Utility;
+using OOP_Assignment3;
 
 namespace Assignment3.Tests
 {
     public class SerializationTests
     {
-        private ILinkedListADT users;
+        private UserLinkedList<User> users;
         private readonly string testFileName = "test_users.bin";
 
         [SetUp]
         public void Setup()
         {
             // Uncomment the following line
-            //this.users = new SLL();
+            this.users = new UserLinkedList<User>();
 
             users.AddLast(new User(1, "Joe Blow", "jblow@gmail.com", "password"));
             users.AddLast(new User(2, "Joe Schmoe", "joe.schmoe@outlook.com", "abcdef"));
@@ -43,7 +44,7 @@ namespace Assignment3.Tests
         public void TestDeSerialization()
         {
             SerializationHelper.SerializeUsers(users, testFileName);
-            ILinkedListADT deserializedUsers = SerializationHelper.DeserializeUsers(testFileName);
+            UserLinkedList<User> deserializedUsers = (UserLinkedList<User>)SerializationHelper.DeserializeUsers(testFileName);
             
             Assert.IsTrue(users.Count() == deserializedUsers.Count());
             

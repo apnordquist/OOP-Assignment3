@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using OOP_Assignment3.Utility;
@@ -208,12 +210,12 @@ namespace OOP_Assignment3
             return -1;
         }
 
-        public bool Contains(User value)
+        public bool Contains(User value) //vedant
         {
             return IndexOf(value) != -1;
         }
 
-        public void ReverseOrder() //additional method from assignement
+        public void ReverseOrder() //adamt
         {
             int revCounter = Count(); //get list length
             UserLinkedList<User> revList = new UserLinkedList<User>();
@@ -231,7 +233,7 @@ namespace OOP_Assignment3
             }
         }
 
-        public void JoinList(UserLinkedList<User> list2) //additional method from assignement
+        public void JoinList(UserLinkedList<User> list2) //adam
         {
             int index = list2.Counter; //get length of the second list
             while (index > 0) //loop through the second list
@@ -240,6 +242,18 @@ namespace OOP_Assignment3
                 list2.RemoveFirst(); //remove from the second list
                 index--;
             }
+        }
+
+        public void SerializeUsers(string fileName) //adam
+        {
+            string jsonString = JsonSerializer.Serialize(this); //converts list as json string
+            File.WriteAllText(fileName, jsonString); //writes to file
+        }
+
+        public UserLinkedList<User> DeserializeUsers(string fileName) //adam
+        {
+            string jsonData = File.ReadAllText(fileName); //read the file
+            return JsonSerializer.Deserialize<UserLinkedList<User>>(jsonData); // convert back to a userlinkedlist object
         }
     }
 }
